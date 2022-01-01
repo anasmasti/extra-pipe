@@ -1,24 +1,42 @@
-# ExtraPipe
+# ExtraPipe 🚀
+### Without introductions, ExtraPipe is just some kindfull Pipes for Angular developers
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.0.
+until now we just have 'capitalize' Pipe, we are working to include new useful Pipes for you.
+<br/>
 
-## Code scaffolding
+<strong>Capitalize Pipe:</strong> it takes a string value as input and in return it offers you a capitalized text.
 
-Run `ng generate component component-name --project extra-pipe` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project extra-pipe`.
-> Note: Don't forget to add `--project extra-pipe` or else it will be added to the default project in your `angular.json` file. 
+- 1 : Import ExtraPipeModule 
+```js
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'; // <----
+// HERE
+import { ExtraPipeModule } from 'projects/extra-pipe/src/public-api';
 
-## Build
+import { AppComponent } from './app.component';
 
-Run `ng build extra-pipe` to build the project. The build artifacts will be stored in the `dist/` directory.
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    // LIKE THIS
+    ExtraPipeModule // <----
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-## Publishing
+- 2 : Add your Pipe with 'async' pipe
+```html 
+<h1>
+  {{'title' | capitalize | async}}
+</h1>
+```
+<br/>
+<br/>
 
-After building your library with `ng build extra-pipe`, go to the dist folder `cd dist/extra-pipe` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test extra-pipe` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+> Version 0.0.1

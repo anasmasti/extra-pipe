@@ -1,6 +1,13 @@
 {
   "name": "extra-pipe",
   "version": "0.0.1",
+  "author": {
+    "name": "Anas Masti",
+    "email": "anasmasti@hotmail.com",
+    "url": "https://anasmasti.com/"
+  },
+  "description": "Without introductions, ExtraPipe is just some kindfull Pipes for Angular developers",
+  "keywords": ["Angular", "Pipe"],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
