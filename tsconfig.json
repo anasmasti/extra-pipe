@@ -6,6 +6,12 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "paths": {
+      "extra-pipe": [
+        "dist/extra-pipe/extra-pipe",
+        "dist/extra-pipe"
+      ]
+    },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
