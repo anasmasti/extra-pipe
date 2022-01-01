@@ -39,4 +39,4 @@ export class AppModule { }
 <br/>
 <br/>
 
-> Version 1-beta1
+> Version 0.0.1
