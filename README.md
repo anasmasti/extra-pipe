@@ -1,4 +1,4 @@
-# ExtraPipe 🚀
+# Extra Pipe 🚀
 ### Without introductions, ExtraPipe is just some kindfull Pipes for Angular developers
 
 until now we just have 'capitalize' Pipe, we are working to include new useful Pipes for you.
