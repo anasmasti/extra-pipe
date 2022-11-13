@@ -11,7 +11,9 @@ export class CapitalizePipe implements PipeTransform {
       return true;
     };
 
-    // Return capitalized observable
+    /* 
+      @return observable 
+    */
     let capitaliedText$ = of(text).pipe(
       map((text) => {
         let firstLetterCapitalized: string = text[0].toUpperCase();
