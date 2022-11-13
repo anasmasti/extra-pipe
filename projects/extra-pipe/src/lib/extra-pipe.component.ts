@@ -16,5 +16,4 @@ export class ExtraPipeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

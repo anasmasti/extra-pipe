@@ -11,6 +11,7 @@ export class CapitalizePipe implements PipeTransform {
       return true;
     };
 
+    // Return capitalized observable
     let capitaliedText$ = of(text).pipe(
       map((text) => {
         let firstLetterCapitalized: string = text[0].toUpperCase();
@@ -20,12 +21,12 @@ export class CapitalizePipe implements PipeTransform {
       })
     );
 
-    let finalText$ = iif(
+    let output$ = iif(
       () => checkValidation(),
       capitaliedText$,
-      throwError(() => 'Text must be an string')
+      throwError(() => 'Text must be a string')
     );
 
-    return finalText$;
+    return output$;
   }
 }
