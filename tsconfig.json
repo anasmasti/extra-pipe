@@ -7,10 +7,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "paths": {
-      "extra-pipe": [
-        "dist/extra-pipe/extra-pipe",
-        "dist/extra-pipe"
-      ]
+      "extra-pipe": ["dist/extra-pipe/extra-pipe", "dist/extra-pipe"]
     },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -24,10 +21,7 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ]
+    "lib": ["es2021", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
