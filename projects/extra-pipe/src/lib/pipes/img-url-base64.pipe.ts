@@ -1,6 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
+  standalone: true,
   name: 'imgUrlBase64',
 })
 export class Base64ImgUrlPipe implements PipeTransform {

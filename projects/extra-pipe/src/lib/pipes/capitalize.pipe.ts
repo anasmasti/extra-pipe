@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { iif, map, of, throwError } from 'rxjs';
 
 @Pipe({
+  standalone: true,
   name: 'capitalize',
 })
 export class CapitalizePipe implements PipeTransform {
