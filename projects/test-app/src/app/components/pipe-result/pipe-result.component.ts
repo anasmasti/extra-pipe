@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RoundHalfUpPipe } from 'projects/extra-pipe/src/lib/pipes/roud-half-up.pipe';
+import { RoundHalfUpPipe } from 'projects/extra-pipe/src/lib/shared/pipes/roud-half-up.pipe';
 
 @Component({
   standalone: true,
