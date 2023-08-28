@@ -7,7 +7,7 @@ import { ROUND_HALF_PARAMS } from '../enums/round-half.enum';
   standalone: true,
   name: 'roundHalf',
 })
-export class RoundHalfUpPipe implements PipeTransform {
+export class RoundHalfPipe implements PipeTransform {
   transform(
     number: number,
     param: RoundHalfParam = ROUND_HALF_PARAMS.up
