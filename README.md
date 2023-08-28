@@ -1,6 +1,6 @@
 # Extra Pipe 🚀
 
-Welcome to the documentation for the **extra-pipes** library! This library provides a collection of custom pipes that you can use to enhance your Angular applications. Each pipe serves a specific purpose, from text formatting to data manipulation. The pipes are designed to be standalone, making it easy to integrate them into your projects.
+Welcome to the documentation for the **extra-pipe** library! This library provides a collection of custom pipes that you can use to enhance your Angular applications. Each pipe serves a specific purpose, from text formatting to data manipulation. The pipes are designed to be standalone, making it easy to integrate them into your projects.
 
 ## Table of Contents
 
@@ -20,16 +20,16 @@ Welcome to the documentation for the **extra-pipes** library! This library provi
 
 ## Installation
 
-To start using the extra-pipes library, you need to install it in your Angular project. You can do this using npm or yarn:
+To start using the extra-pipe library, you need to install it in your Angular project. You can do this using npm or yarn:
 
 ```bash
-npm install extra-pipes
+npm install extra-pipe
 ```
 
 or
 
 ```bash
-yarn add extra-pipes
+yarn add extra-pipe
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ Once you've installed the library, you can import and use the custom pipes in yo
 
 ```typescript
 import { NgModule } from "@angular/core";
-import { CapitalizePipe } from "extra-pipes";
+import { CapitalizePipe } from "extra-pipe";
 
 @NgModule({
   declarations: [
@@ -129,10 +129,10 @@ Replaces commas with a specified separator.
 
 ## Contribution
 
-If you'd like to contribute to the extra-pipes library, feel free to open issues or submit pull requests on the GitHub repository. We welcome any suggestions, bug reports, or enhancements.
+If you'd like to contribute to the extra-pipe library, feel free to open issues or submit pull requests on the GitHub repository. We welcome any suggestions, bug reports, or enhancements.
 
 ### License
 
 This library is released under the MIT License.
 
-We hope you find the extra-pipes library helpful for enhancing your Angular applications. If you have any questions or need assistance, don't hesitate to reach out to our community or the library's maintainers. Happy coding!
+We hope you find the extra-pipe library helpful for enhancing your Angular applications. If you have any questions or need assistance, don't hesitate to reach out to our community or the library's maintainers. Happy coding!

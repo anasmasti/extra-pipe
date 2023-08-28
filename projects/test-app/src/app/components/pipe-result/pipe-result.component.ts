@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ReplaceCommaPipe } from 'projects/extra-pipe/src/lib/shared/pipes/replace-comma.pipe';
+import { ReplaceCommaPipe } from 'extra-pipe';
 
 @Component({
   standalone: true,
