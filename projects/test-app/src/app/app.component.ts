@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { PipeResultComponent } from './components/pipe-result/pipe-result.component';
 
 @Component({
   selector: 'app-root',
