@@ -5,8 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'localizedDate',
 })
 export class LocalizedPipe implements PipeTransform {
-  transform(value: any, userLanguage: string = 'en-US') {
+  transform(value: string | Date, userLanguage: string = 'en-US') {
+    if (typeof value !== 'string') return value;
+
     const date = new Date(value);
+
+    if (isNaN(date.getTime())) return '';
+
     const dateFormatter = new Intl.DateTimeFormat(userLanguage, {
       year: 'numeric',
       month: 'numeric',
