@@ -64,10 +64,9 @@
               "projects/test-app/src/favicon.ico",
               "projects/test-app/src/assets"
             ],
-            "styles": [
-              "projects/test-app/src/styles.scss"
-            ],
-            "scripts": []
+            "styles": ["projects/test-app/src/styles.scss"],
+            "scripts": [],
+            "aot": true
           },
           "configurations": {
             "production": {
@@ -132,14 +131,12 @@
               "projects/test-app/src/favicon.ico",
               "projects/test-app/src/assets"
             ],
-            "styles": [
-              "projects/test-app/src/styles.scss"
-            ],
+            "styles": ["projects/test-app/src/styles.scss"],
             "scripts": []
           }
         }
       }
     }
   },
-  "defaultProject": "extra-pipe"
+  "defaultProject": "test-app"
 }
