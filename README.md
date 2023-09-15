@@ -126,6 +126,14 @@ Replaces commas with a specified separator.
 <p>{{ '44,54' | replaceComma }}</p>
 <!-- 44.54 -->
 ```
+### NumberToLettersPipe
+
+Converting numbers into letters.
+
+```html
+<p>{{ 1000000 | numberToLetters}}</p>
+<!-- One Million -->
+```
 
 ## Contribution
 
