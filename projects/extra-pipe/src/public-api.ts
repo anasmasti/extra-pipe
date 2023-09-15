@@ -10,3 +10,4 @@ export * from './lib/shared/pipes/localized-date.pipe';
 export * from './lib/shared/pipes/replace-comma.pipe';
 export * from './lib/shared/pipes/roud-half.pipe';
 export * from './lib/shared/pipes/uppercase-from.pipe';
+export * from './lib/shared/pipes/numbers-to-letters.pipe';

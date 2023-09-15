@@ -1,6 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
+  standalone: true,
   name: 'numberToLetters'
 })
 export class NumberToLettersPipe implements PipeTransform {
@@ -19,6 +20,8 @@ export class NumberToLettersPipe implements PipeTransform {
   private convertToWords(num: number): string {
     if (num < 10) {
       return this.units[num];
+    } else if (num == 10) {
+      return this.tens[1];
     } else if (num < 20) {
       return this.teens[num - 10];
     } else if (num < 100) {
