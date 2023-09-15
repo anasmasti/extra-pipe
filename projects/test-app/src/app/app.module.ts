@@ -1,18 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ExtraPipeModule } from 'projects/extra-pipe/src/public-api';
 
 import { AppComponent } from './app.component';
+import { PipeResultComponent } from './components/pipe-result/pipe-result.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    ExtraPipeModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, PipeResultComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

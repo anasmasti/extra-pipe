@@ -1,16 +1,19 @@
 {
   "name": "extra-pipe",
-  "version": "0.0.2",
+  "version": "0.1.1",
   "author": {
     "name": "Anas Masti",
     "email": "anasmasti@hotmail.com",
     "url": "https://anasmasti.com/"
   },
-  "description": "Without introductions, ExtraPipe is just some kindfull Pipes for Angular developers",
-  "keywords": ["Angular", "Pipe"],
+  "description": "This library provides a collection of custom pipes that you can use to enhance your Angular applications. Each pipe serves a specific purpose, from text formatting to data manipulation. The pipes are designed to be standalone, making it easy to integrate them into your projects.",
+  "keywords": [
+    "Angular",
+    "Pipe"
+  ],
   "peerDependencies": {
-    "@angular/common": "^13.1.0",
-    "@angular/core": "^13.1.0"
+    "@angular/common": "^16.2.2",
+    "@angular/core": "^16.2.2"
   },
   "dependencies": {
     "tslib": "^2.3.0"
