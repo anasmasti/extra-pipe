@@ -1,15 +1,15 @@
 import { TestBed } from '@angular/core/testing';
-import { NumberToLettersPipe } from '../shared/pipes/numbers-to-letters.pipe';
+import { NumberToWordsPipe } from '../shared/pipes/number-to-words.pipe';
 
 
-describe('NumberToLettersPipe', () => {
-  let pipe: NumberToLettersPipe;
+describe('NumberToWordsPipe', () => {
+  let pipe: NumberToWordsPipe;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [NumberToLettersPipe],
+      providers: [NumberToWordsPipe],
     });
-    pipe = TestBed.inject(NumberToLettersPipe);
+    pipe = TestBed.inject(NumberToWordsPipe);
   });
 
   it('should create an instance', () => {

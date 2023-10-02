@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NumberToLettersPipe } from 'projects/extra-pipe/src/public-api';
+import { NumberToWordsPipe } from 'projects/extra-pipe/src/lib/shared/pipes/number-to-words.pipe';
 
 @Component({
   standalone: true,
   selector: 'app-pipe-result',
   templateUrl: './pipe-result.component.html',
-  imports: [NumberToLettersPipe],
+  imports: [NumberToWordsPipe],
 })
 export class PipeResultComponent {
   title = 'test-app';
