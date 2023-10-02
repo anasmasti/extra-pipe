@@ -1,52 +1,34 @@
-// import { TestBed } from '@angular/core/testing';
-// import { NumberToWordsPipe } from '../shared/pipes/number-to-words.pipe';
+import { NumberToWordsPipe } from "../shared/pipes/number-to-words.pipe";
 
+describe('NumberToWordsPipe', () => {
+  let pipe: NumberToWordsPipe;
 
-// describe('NumberToWordsPipe', () => {
-//   let pipe: NumberToWordsPipe;
+  beforeEach(() => {
+    pipe = new NumberToWordsPipe();
+  });
 
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       providers: [NumberToWordsPipe],
-//     });
-//     pipe = TestBed.inject(NumberToWordsPipe);
-//   });
+  it('should create an instance', () => {
+    expect(pipe).toBeTruthy();
+  });
 
-//   it('should create an instance', () => {
-//     expect(pipe).toBeTruthy();
-//   });
+  it('should transform 0 to "Zero"', () => {
+    const result = pipe.transform(0, 'en');
+    expect(result).toBe('Zero');
+  });
 
-//   it('should transform 0 to "Zero"', () => {
-//     expect(pipe.transform(0)).toBe('Zero');
-//   });
+  it('should transform a number to words in English', () => {
+    const result = pipe.transform(12345, 'en');
+    expect(result).toBe('Twelve Thousand Three Hundred Forty-Five');
+  });
 
-//   it('should transform single-digit numbers correctly', () => {
-//     expect(pipe.transform(1)).toBe('One');
-//     expect(pipe.transform(5)).toBe('Five');
-//     expect(pipe.transform(10)).toBe('Ten');
-//     // Add more test cases for single-digit numbers
-//   });
+  it('should transform a number to words in French', () => {
+    const result = pipe.transform(6789, 'fr');
+    expect(result).toBe('Six Mille Sept Cent Quatre-vingts-Neuf');
+  });
 
-//   it('should transform numbers less than 20 correctly', () => {
-//     expect(pipe.transform(11)).toBe('Eleven');
-//     expect(pipe.transform(15)).toBe('Fifteen');
-//     // Add more test cases for numbers less than 20
-//   });
+  it('should handle numbers larger than the maximum supported', () => {
+    const result = pipe.transform(1000000000000, 'en');
+    expect(result).toBe('Number is too large to convert');
+  });
 
-//   it('should transform numbers less than 100 correctly', () => {
-//     expect(pipe.transform(21)).toBe('Twenty One');
-//     expect(pipe.transform(45)).toBe('Forty Five');
-//     // Add more test cases for numbers less than 100
-//   });
-
-//   it('should transform numbers less than 1000 correctly', () => {
-//     expect(pipe.transform(123)).toBe('One Hundred Twenty Three');
-//     expect(pipe.transform(999)).toBe('Nine Hundred Ninety Nine');
-//     // Add more test cases for numbers less than 1000
-//   });
-
-//   it('should handle large numbers and return "Number is too large to convert"', () => {
-//     expect(pipe.transform(1000000000)).toBe('Number is too large to convert');
-//     // Add more test cases for large numbers
-//   });
-// });
+});
