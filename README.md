@@ -126,18 +126,18 @@ Replaces commas with a specified separator.
 <p>{{ '44,54' | replaceComma }}</p>
 <!-- 44.54 -->
 ```
-### NumberToLettersPipe
+### NumberToWordsPipe
 
 Converting numbers into words.
 
 ```html
-<p>{{ 1000000 | numberToLetters : 'en'}}</p>
+<p>{{ 1000000 | numberToWords : 'en'}}</p>
 <!-- One Million -->
-<p>{{ 95 | numberToLetters : 'fr'}}</p>
+<p>{{ 95 | numberToWords : 'fr'}}</p>
 <!-- Quatre-vingt-Quinze -->
-<p>{{ 1000000000000 | numberToLetters : 'en'}}</p>
+<p>{{ 1000000000000 | numberToWords : 'en'}}</p>
 <!-- Number is too large to convert -->
-<p>{{ 1000000000000 | numberToLetters : 'fr'}}</p>
+<p>{{ 1000000000000 | numberToWords : 'fr'}}</p>
 <!-- Le nombre est trop grand pour être converti -->
 ```
 
