@@ -2,22 +2,87 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   standalone: true,
-  name: 'numberToWords'
+  name: 'numberToWords',
 })
-
 export class NumberToWordsPipe implements PipeTransform {
   private readonly units: any = {
-    en: ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'],
-    fr: ['', 'Un', 'Deux', 'Trois', 'Quatre', 'Cinq', 'Six', 'Sept', 'Huit', 'Neuf'],
+    en: [
+      '',
+      'One',
+      'Two',
+      'Three',
+      'Four',
+      'Five',
+      'Six',
+      'Seven',
+      'Eight',
+      'Nine',
+    ],
+    fr: [
+      '',
+      'Un',
+      'Deux',
+      'Trois',
+      'Quatre',
+      'Cinq',
+      'Six',
+      'Sept',
+      'Huit',
+      'Neuf',
+    ],
   };
 
   private readonly teens: any = {
-    en: ['', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'],
-    fr: ['', 'Onze', 'Douze', 'Treize', 'Quatorze', 'Quinze', 'Seize', 'Dix-sept', 'Dix-huit', 'Dix-neuf'],
+    en: [
+      '',
+      'Eleven',
+      'Twelve',
+      'Thirteen',
+      'Fourteen',
+      'Fifteen',
+      'Sixteen',
+      'Seventeen',
+      'Eighteen',
+      'Nineteen',
+    ],
+    fr: [
+      '',
+      'Onze',
+      'Douze',
+      'Treize',
+      'Quatorze',
+      'Quinze',
+      'Seize',
+      'Dix-sept',
+      'Dix-huit',
+      'Dix-neuf',
+    ],
   };
   private readonly tens: any = {
-    en: ['', 'Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'],
-    fr: ['', 'Dix', 'Vingt', 'Trente', 'Quarante', 'Cinquante', 'Soixante', 'Soixante-dix', 'Quatre-vingts', 'Quatre-vingt-dix'],
+    en: [
+      '',
+      'Ten',
+      'Twenty',
+      'Thirty',
+      'Forty',
+      'Fifty',
+      'Sixty',
+      'Seventy',
+      'Eighty',
+      'Ninety',
+    ],
+    fr: [
+      '',
+      'Dix',
+      'Vingt',
+      'Trente',
+      'Quarante',
+      'Cinquante',
+      'Soixante',
+      'Soixante-dix',
+      'Quatre-vingts',
+      'Quatre-vingt-dix',
+    ],
   };
 
   private readonly languageStrings: any = {
@@ -59,7 +124,8 @@ export class NumberToWordsPipe implements PipeTransform {
 
   convertToWords(num: number, lang: string): string {
     const { units, teens, tens, languageStrings, largeNumbers } = this;
-    const { tooLarge, billion, million, thousand, hundred } = languageStrings[lang];
+    const { tooLarge, billion, million, thousand, hundred } =
+      languageStrings[lang];
 
     if (num > largeNumbers.maxNumber) {
       return tooLarge;
@@ -72,12 +138,20 @@ export class NumberToWordsPipe implements PipeTransform {
     let result = '';
 
     if (num >= largeNumbers.billion) {
-      result += this.convertToWords(Math.floor(num / largeNumbers.billion), lang) + ' ' + billion + ' ';
+      result +=
+        this.convertToWords(Math.floor(num / largeNumbers.billion), lang) +
+        ' ' +
+        billion +
+        ' ';
       num %= largeNumbers.billion;
     }
 
     if (num >= largeNumbers.million) {
-      result += this.convertToWords(Math.floor(num / largeNumbers.million), lang) + ' ' + million + ' ';
+      result +=
+        this.convertToWords(Math.floor(num / largeNumbers.million), lang) +
+        ' ' +
+        million +
+        ' ';
       num %= largeNumbers.million;
     }
 
@@ -88,12 +162,20 @@ export class NumberToWordsPipe implements PipeTransform {
           if (thousends === 1) {
             result += 'Mille ';
           } else if (thousends > 1) {
-            result += this.convertToWords(Math.floor(num / largeNumbers.thousand), lang) + ' Mille ';
+            result +=
+              this.convertToWords(
+                Math.floor(num / largeNumbers.thousand),
+                lang
+              ) + ' Mille ';
           }
           num %= largeNumbers.thousand;
           break;
         case 'en':
-          result += this.convertToWords(Math.floor(num / largeNumbers.thousand), lang) + ' ' + thousand + ' ';
+          result +=
+            this.convertToWords(Math.floor(num / largeNumbers.thousand), lang) +
+            ' ' +
+            thousand +
+            ' ';
           num %= largeNumbers.thousand;
           break;
       }
@@ -111,7 +193,11 @@ export class NumberToWordsPipe implements PipeTransform {
           num %= largeNumbers.hundred;
           break;
         case 'en':
-          result += units[lang][Math.floor(num / largeNumbers.hundred)] + ' ' + hundred + ' ';
+          result +=
+            units[lang][Math.floor(num / largeNumbers.hundred)] +
+            ' ' +
+            hundred +
+            ' ';
           num %= largeNumbers.hundred;
           break;
       }
@@ -123,7 +209,11 @@ export class NumberToWordsPipe implements PipeTransform {
       result += tens[lang][Math.floor(num / largeNumbers.ten)];
       switch (lang) {
         case 'fr':
-          if (num % largeNumbers.ten !== 0 && (num < 90 || num > 99) && (num < 70 || num > 79)) {
+          if (
+            num % largeNumbers.ten !== 0 &&
+            (num < 90 || num > 99) &&
+            (num < 70 || num > 79)
+          ) {
             result += '-' + units[lang][num % largeNumbers.ten];
           }
           if (num >= 91 && num <= 99) {

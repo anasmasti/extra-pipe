@@ -1,4 +1,4 @@
-import { NumberToWordsPipe } from "../shared/pipes/number-to-words.pipe";
+import { NumberToWordsPipe } from '../core/pipes/number-to-words.pipe';
 
 describe('NumberToWordsPipe', () => {
   let pipe: NumberToWordsPipe;
@@ -30,5 +30,4 @@ describe('NumberToWordsPipe', () => {
     const result = pipe.transform(1000000000000, 'en');
     expect(result).toBe('Number is too large to convert');
   });
-
 });

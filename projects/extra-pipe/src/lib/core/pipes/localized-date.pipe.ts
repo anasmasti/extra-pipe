@@ -5,9 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'localizedDate',
 })
 export class LocalizedPipe implements PipeTransform {
-  transform(value: string | Date, userLanguage: string = 'en-US') {
-    if (typeof value !== 'string') return value;
-
+  transform(value: Date, userLanguage: string = 'en-US') {
     const date = new Date(value);
 
     if (isNaN(date.getTime())) return '';

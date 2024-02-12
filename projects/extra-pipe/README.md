@@ -37,8 +37,8 @@ yarn add extra-pipe
 Once you've installed the library, you can import and use the custom pipes in your Angular components and templates. Import the desired pipe and add it to your NgModule's declarations array.
 
 ```typescript
-import { NgModule } from "@angular/core";
-import { CapitalizePipe } from "extra-pipe";
+import { NgModule } from '@angular/core';
+import { CapitalizePipe } from 'extra-pipe';
 
 @NgModule({
   declarations: [
