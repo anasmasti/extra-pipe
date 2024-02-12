@@ -204,7 +204,7 @@ This pipe replaces underscores in strings with spaces.
 
 ## Contribution
 
-If you'd like to contribute to the extra-pipe library, feel free to open issues or submit pull requests on the GitHub repository. We welcome any suggestions, bug reports, or enhancements.
+If you'd like to contribute to the extra-pipe library, feel free to open issues or submit pull requests on the <a href="https://github.com/anasmasti/extra-pipe"> GitHub repository</a>. We welcome any suggestions, bug reports, or enhancements.
 
 ### License
 
