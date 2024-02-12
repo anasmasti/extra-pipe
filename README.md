@@ -15,6 +15,13 @@ Welcome to the documentation for the **extra-pipe** library! This library provid
    - RoundHalfUpPipe
    - UpperCaseFromPipe
    - ReplaceCommaPipe
+   - NumberToWordsPipe
+   - RemoveByKeyPipe
+   - CamelCaseToTitleSeparatedCasePipe
+   - FormatInstanceofDatePipe
+   - IncludesPipe
+   - RemoveDuplicatesByKeyPipe
+   - UnderscoreToTitlePipe
 4. Contribution
 5. License
 
