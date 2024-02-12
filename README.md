@@ -37,8 +37,8 @@ yarn add extra-pipe
 Once you've installed the library, you can import and use the custom pipes in your Angular components and templates. Import the desired pipe and add it to your NgModule's declarations array.
 
 ```typescript
-import { NgModule } from "@angular/core";
-import { CapitalizePipe } from "extra-pipe";
+import { NgModule } from '@angular/core';
+import { CapitalizePipe } from 'extra-pipe';
 
 @NgModule({
   declarations: [
@@ -126,6 +126,7 @@ Replaces commas with a specified separator.
 <p>{{ '44,54' | replaceComma }}</p>
 <!-- 44.54 -->
 ```
+
 ### NumberToWordsPipe
 
 Converting numbers into words.
@@ -139,6 +140,66 @@ Converting numbers into words.
 <!-- Number is too large to convert -->
 <p>{{ 1000000000000 | numberToWords : 'fr'}}</p>
 <!-- Le nombre est trop grand pour être converti -->
+```
+
+### RemoveByKeyPipe
+
+This Angular pipe is designed to filter an array of objects based on the value of a specified key.
+
+```html
+<!-- items = [1,2,3] -->
+
+<div *ngFor="let item of items | removeByKey: 'id': [1, 2]">
+  <!-- Render item content here -->
+</div>
+```
+
+### CamelCaseToTitleSeparatedCasePipe
+
+This pipe converts camel case strings into title separated case. It adds spaces before capital letters.
+
+```html
+{{ 'camelCaseString' | camelCaseToTitleSeparatedCase }}
+<!-- Output: 'camel Case String' -->
+```
+
+### FormatInstanceofDatePipe
+
+This pipe formats Date objects according to specified options. It also optionally includes time formatting.
+
+```html
+{{ myDate | formatInstanceofDate }}
+<!-- Output: 'Jan 1, 2022' -->
+
+{{ myDate | formatInstanceofDate:true:true }}
+<!-- Output: 'Jan 1, 2022 12:00 PM' -->
+```
+
+### IncludesPipe
+
+This pipe formats Date objects according to specified options. It also optionally includes time formatting.
+
+```html
+<div *ngIf="items | includes:element">Element is included in the array</div>
+```
+
+### RemoveDuplicatesByKeyPipe
+
+This pipe removes duplicate objects from an array based on a specified key.
+
+```html
+<div *ngFor="let item of arrayData | removeDuplicatesByKey:'id'">
+  <!-- Display unique items -->
+</div>
+```
+
+### UnderscoreToTitlePipe
+
+This pipe replaces underscores in strings with spaces.
+
+```html
+{{ 'underscore_string' | underscoreToTitle }}
+<!-- Output: 'underscore string' -->
 ```
 
 ## Contribution

@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { roudHalfFacade } from '../helper/round-half.helper';
-import { type RoundHalfParam } from '../types/round-half.type';
-import { ROUND_HALF_PARAMS } from '../enums/round-half.enum';
+import { ROUND_HALF_PARAMS } from '../../shared/enums/round-half.enum';
+import { roudHalfFacade } from '../../shared/helper/round-half.helper';
+import { RoundHalfParam } from '../../shared/types/round-half.type';
 
 @Pipe({
   standalone: true,
