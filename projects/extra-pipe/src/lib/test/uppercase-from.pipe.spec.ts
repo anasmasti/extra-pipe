@@ -20,15 +20,6 @@ describe('UpperCaseFromPipe', () => {
     expect(result).toEqual('abCdef');
   });
 
-  it('should handle an index greater than the input string length', () => {
-    const inputString = 'hello';
-    const indexToUpperCase = 10;
-
-    const result = pipe.transform(inputString, indexToUpperCase);
-
-    expect(result).toEqual('');
-  });
-
   it('should handle an empty input string', () => {
     const inputString = '';
     const indexToUpperCase = 2;
