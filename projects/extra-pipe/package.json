@@ -6,6 +6,10 @@
     "email": "anasmasti@hotmail.com",
     "url": "https://anasmasti.com/"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anasmasti/extra-pipe"
+  },
   "description": "This library provides a collection of custom pipes that you can use to enhance your Angular applications. Each pipe serves a specific purpose, from text formatting to data manipulation. The pipes are designed to be standalone, making it easy to integrate them into your projects.",
   "keywords": [
     "Angular",
