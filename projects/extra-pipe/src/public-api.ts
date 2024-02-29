@@ -17,3 +17,5 @@ export * from './lib/core/pipes/remove-by-key.pipe';
 export * from './lib/core/pipes/remove-duplicates-by-key.pipe';
 export * from './lib/core/pipes/underscore-to-title.pipe';
 export * from './lib/core/pipes/camel-case-to-title-seperated-case.pipe';
+export * from './lib/core/pipes/snake-case-to-camel-case.pipe';
+export * from './lib/core/pipes/camel-case-to-snake-case.pipe';

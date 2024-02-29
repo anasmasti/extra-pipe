@@ -17,6 +17,8 @@ import {
   UnderscoreToTitlePipe,
   RemoveDuplicatesByKeyPipe,
   NumberToWordsPipe,
+  SnakeToCamelPipe,
+  CamelToSnakePipe,
 } from 'extra-pipe';
 
 @Component({
@@ -41,6 +43,8 @@ import {
     JsonPipe,
     RemoveDuplicatesByKeyPipe,
     NumberToWordsPipe,
+    SnakeToCamelPipe,
+    CamelToSnakePipe,
   ],
 })
 export class PipeResultComponent {
