@@ -15,13 +15,6 @@ Welcome to the documentation for the **extra-pipe** library! This library provid
    - RoundHalfUpPipe
    - UpperCaseFromPipe
    - ReplaceCommaPipe
-   - NumberToWordsPipe
-   - RemoveByKeyPipe
-   - CamelCaseToTitleSeparatedCasePipe
-   - FormatInstanceofDatePipe
-   - IncludesPipe
-   - RemoveDuplicatesByKeyPipe
-   - UnderscoreToTitlePipe
 4. Contribution
 5. License
 
@@ -134,84 +127,27 @@ Replaces commas with a specified separator.
 <!-- 44.54 -->
 ```
 
-### NumberToWordsPipe
+### CamelToSnakePipe
 
-Converting numbers into words.
+Convert camel case strings to snake case.
 
 ```html
-<p>{{ 1000000 | numberToWords : 'en'}}</p>
-<!-- One Million -->
-<p>{{ 95 | numberToWords : 'fr'}}</p>
-<!-- Quatre-vingt-Quinze -->
-<p>{{ 1000000000000 | numberToWords : 'en'}}</p>
-<!-- Number is too large to convert -->
-<p>{{ 1000000000000 | numberToWords : 'fr'}}</p>
-<!-- Le nombre est trop grand pour être converti -->
+<p>{{ 'camelCase' | camelToSnake }}</p>
+<!-- camel_case -->
 ```
 
-### RemoveByKeyPipe
+### CamelToSnakePipe
 
-This Angular pipe is designed to filter an array of objects based on the value of a specified key.
-
-```html
-<!-- items = [1,2,3] -->
-
-<div *ngFor="let item of items | removeByKey: 'id': [1, 2]">
-  <!-- Render item content here -->
-</div>
-```
-
-### CamelCaseToTitleSeparatedCasePipe
-
-This pipe converts camel case strings into title separated case. It adds spaces before capital letters.
+Convert a string from snake case to camel case.
 
 ```html
-{{ 'camelCaseString' | camelCaseToTitleSeparatedCase }}
-<!-- Output: 'camel Case String' -->
-```
-
-### FormatInstanceofDatePipe
-
-This pipe formats Date objects according to specified options. It also optionally includes time formatting.
-
-```html
-{{ myDate | formatInstanceofDate }}
-<!-- Output: 'Jan 1, 2022' -->
-
-{{ myDate | formatInstanceofDate:true:true }}
-<!-- Output: 'Jan 1, 2022 12:00 PM' -->
-```
-
-### IncludesPipe
-
-This pipe formats Date objects according to specified options. It also optionally includes time formatting.
-
-```html
-<div *ngIf="items | includes:element">Element is included in the array</div>
-```
-
-### RemoveDuplicatesByKeyPipe
-
-This pipe removes duplicate objects from an array based on a specified key.
-
-```html
-<div *ngFor="let item of arrayData | removeDuplicatesByKey:'id'">
-  <!-- Display unique items -->
-</div>
-```
-
-### UnderscoreToTitlePipe
-
-This pipe replaces underscores in strings with spaces.
-
-```html
-{{ 'underscore_string' | underscoreToTitle }}
-<!-- Output: 'underscore string' -->
+<p>{{ 'snake_case' | snakeToCamel }}</p>
+<!-- snakeCase -->
 ```
 
 ## Contribution
 
-If you'd like to contribute to the extra-pipe library, feel free to open issues or submit pull requests on the <a href="https://github.com/anasmasti/extra-pipe"> GitHub repository</a>. We welcome any suggestions, bug reports, or enhancements.
+If you'd like to contribute to the extra-pipe library, feel free to open issues or submit pull requests on the GitHub repository. We welcome any suggestions, bug reports, or enhancements.
 
 ### License
 
