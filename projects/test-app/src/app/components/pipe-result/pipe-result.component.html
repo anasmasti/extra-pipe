@@ -18,3 +18,5 @@
 <p>{{ 'hello' | upperCaseFrom: 1 }}</p>
 <p>{{ itemsWithDuplication | removeDuplicatesByKey: 'name' | json }}</p>
 <p>{{ 95 | numberToWords: 'fr' }}</p>
+<p>{{ 'snake_case_variable' | snakeToCamel }}</p>
+<p>{{ 'snakeCaseVariable' | camelToSnake }}</p>
