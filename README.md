@@ -136,7 +136,7 @@ Convert camel case strings to snake case.
 <!-- camel_case -->
 ```
 
-### CamelToSnakePipe
+### SnakeToCamelPipe
 
 Convert a string from snake case to camel case.
 
