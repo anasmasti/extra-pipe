@@ -127,6 +127,24 @@ Replaces commas with a specified separator.
 <!-- 44.54 -->
 ```
 
+### CamelToSnakePipe
+
+Convert camel case strings to snake case.
+
+```html
+<p>{{ 'camelCase' | camelToSnake }}</p>
+<!-- camel_case -->
+```
+
+### CamelToSnakePipe
+
+Convert a string from snake case to camel case.
+
+```html
+<p>{{ 'snake_case' | snakeToCamel }}</p>
+<!-- snakeCase -->
+```
+
 ## Contribution
 
 If you'd like to contribute to the extra-pipe library, feel free to open issues or submit pull requests on the GitHub repository. We welcome any suggestions, bug reports, or enhancements.
