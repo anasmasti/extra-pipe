@@ -34,6 +34,13 @@
             "tsConfig": "projects/extra-pipe/tsconfig.spec.json",
             "karmaConfig": "projects/extra-pipe/karma.conf.js"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "eslintConfig": ".eslintrc.json",
+            "lintFilePatterns": ["**/*.spec.ts", "**/*.ts"]
+          }
         }
       }
     },

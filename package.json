@@ -1,18 +1,15 @@
 {
   "name": "extra-pipe",
-  "version": "0.0.2",
+  "version": "1.0.5",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
-    "build:lib": "ng build extra-pipe",
-    "build:lib:watch": "ng build extra-pipe --watch",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "packagr": "ng-packagr -p ng-package.json",
+    "build:lib": "ng-packagr -p ./projects/extra-pipe/ng-package.json",
     "format": "npx prettier --write .",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:lib": "ng lint extra-pipe"
   },
   "private": true,
   "dependencies": {
