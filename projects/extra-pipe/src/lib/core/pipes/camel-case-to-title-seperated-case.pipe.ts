@@ -13,9 +13,9 @@ export class CamelCaseToTitleSeperatedCasePipe implements PipeTransform {
    * @param value - The string to transform.
    * @returns The transformed string.
    */
-  transform(value: any): string {
+  transform(value: unknown): string {
     if (typeof value === 'string')
       return value.replace(/([A-Z])/g, ' $1').toString();
-    else return value;
+    else return '';
   }
 }

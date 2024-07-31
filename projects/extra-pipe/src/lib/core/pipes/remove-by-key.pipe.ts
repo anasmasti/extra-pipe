@@ -6,6 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   standalone: true,
   name: 'removeByKey',
+  pure: false,
 })
 export class RemoveByKeyPipe implements PipeTransform {
   /**

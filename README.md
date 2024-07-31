@@ -22,6 +22,8 @@ Welcome to the documentation for the **extra-pipe** library! This library provid
    - IncludesPipe
    - RemoveDuplicatesByKeyPipe
    - UnderscoreToTitlePipe
+   - CamelToSnakePipe
+   - SnakeToCamelPipe
 4. Contribution
 5. License
 
@@ -218,7 +220,7 @@ Convert camel case strings to snake case.
 <!-- camel_case -->
 ```
 
-### CamelToSnakePipe
+### SnakeToCamelPipe
 
 Convert a string from snake case to camel case.
 
